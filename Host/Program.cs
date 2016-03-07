@@ -11,6 +11,8 @@ namespace FanTest.WebAPI.Host
     {
         static void Main(string[] args)
         {
+            //要先添加urlacl，否则需要以管理员身份运行。
+
             WebServiceHost wsHost = new WebServiceHost(typeof(CalculatorService));
             wsHost.Open();
             ServiceEndpoint endpoinit = wsHost.Description.Endpoints[0];

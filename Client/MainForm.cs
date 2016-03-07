@@ -23,7 +23,7 @@ namespace FanTest.WebAPI.Client
             string url = this.txtAddress.Text;
 
             WebRequest request = HttpWebRequest.Create(url);
-            //request.Credentials = new NetworkCredential("u1", "123");
+            request.Credentials = new NetworkCredential("admin", "");
             if (this.chkPost.Checked)
             {
                 string contentType = this.cboContentType.Text;
